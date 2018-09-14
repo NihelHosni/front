@@ -1,21 +1,38 @@
-
-  <div class="login">
-    <h1>Login</h1>
-
-    <form class="form" method="post" action="#">
-
-      <p class="field">
-        <input type="text" name="login" placeholder="Username" required/>
-        <i class="fa fa-user"></i>
-      </p>
-
-      <p class="field">
-        <input type="password" name="password" placeholder="Password" required/>
-        <i class="fa fa-lock"></i>
-      </p>
-
-      <p class="submit"><input type="submit" name="sent" value="Login"></p>
-
-
-    </form>
-  </div> <!--/ Login-->
+<div class="test">
+<div class="container">
+  <div class="login-box animated fadeInUp">
+    <div class="box-header">
+      <h2>Log In</h2>
+    </div>
+    <label for="username">Username</label>
+    <br/>
+    <input type="text" id="username">
+    <br/>
+    <label for="password">Password</label>
+    <br/>
+    <input type="password" id="password">
+    <br/>
+    <button type="submit">Sign In</button>
+    <br/>
+    <a href="#"><p class="small">Forgot your password?</p></a>
+  </div>
+</div>
+</div>
+<script>
+	$(document).ready(function () {
+    	$('#logo').addClass('animated fadeInDown');
+    	$("input:text:visible:first").focus();
+	});
+	$('#username').focus(function() {
+		$('label[for="username"]').addClass('selected');
+	});
+	$('#username').blur(function() {
+		$('label[for="username"]').removeClass('selected');
+	});
+	$('#password').focus(function() {
+		$('label[for="password"]').addClass('selected');
+	});
+	$('#password').blur(function() {
+		$('label[for="password"]').removeClass('selected');
+	});
+</script>
